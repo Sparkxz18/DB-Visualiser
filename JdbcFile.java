@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class JdbcFile {
     String url = "jdbc:mysql://localhost:3306";
-    String username = "giri";
-    String password = "VUtv@135";
+    static String username;
+    static String password;
     String query;
 
     public static void main(String[] args) {
@@ -22,6 +22,15 @@ public class JdbcFile {
         System.out.println("                        --> UPDATE <--");
         System.out.println("                        --> DELETE <--");
         System.out.println("                         --> EXIT <--");
+        System.out.println();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("                             LOGIN");
+        System.out.print("Enter your username -> ");
+        username = scan.nextLine();
+        System.out.print("Enter your password -> ");
+        password = scan.nextLine();
+        System.out.println("----------------------------------------------------------------");
         System.out.println();
         JdbcFile obj = new JdbcFile();
         obj.startingPage();
